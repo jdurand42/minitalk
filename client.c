@@ -45,7 +45,7 @@ void send_binary(int *b, int pid)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
-		usleep(100);
+		usleep(10);
 		i++;
 	}
 }
@@ -82,7 +82,7 @@ int main(int ac, char **av)
 		i++;
 		if (i == len)
 			b[7] = 1;
-		print_binary(b);
+		// print_binary(b);
 		send_binary(b, pid);
 	}
 	//sleep(1);
