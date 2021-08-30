@@ -10,7 +10,6 @@ void convert_char_to_binary(int *b, int c)
 {
 	unsigned int base_len;
 	int len;
-	unsigned int quotient;
 
 	base_len = 2;
 	len = 7;
@@ -56,8 +55,6 @@ void handle_sig(int param)
 int main()
 {
 	pid_t pid;
-	int b[7];
-
 	//c = 0;
 	// int b[7];
 	//int i;

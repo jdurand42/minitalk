@@ -29,7 +29,7 @@ void print_binary(int *b)
 
 	while (i < 8)
 	{
-		printf("%d ", b[i]);
+		printf("%d", b[i]);
 		i++;
 	}
 	printf("\n");
@@ -60,6 +60,8 @@ int main(int ac, char **av)
 	if (ac != 3)
 	{
 		write(2, "Wrong number of arguments\n", strlen("Wrong number of arguments\n"));
+		write(1, "Usage: args: [pid of server, given by him] [The string to send]\n",
+		strlen("Usage: args: [pid of server, given by him] [The string to send]\n"));
 		return (1);
 	}
 	pid = atoi(av[1]);
